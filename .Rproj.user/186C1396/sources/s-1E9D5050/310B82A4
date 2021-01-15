@@ -1,0 +1,27 @@
+{
+    "id": "310B82A4",
+    "path": "D:/projects/variant_estimation/modelling.R",
+    "project_path": "modelling.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1610673933198.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "14,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1610688405,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1610688405664,
+    "read_only": false,
+    "read_only_alternatives": []
+}
