@@ -4,15 +4,12 @@ library(ebbr)
 
 
 data <- read_csv(file = "data/processed.csv")
+data <- data %>% mutate(days = seq(1,nrow(data)))
 data
-data <- data %>% group_by(wd) %>% summarise(var = sum(count), samples = sum(n)) %>% 
-    mutate(prop = var/samples)
-ggplot(data, aes(x = prop, y = avg_cases)) + geom_point() 
 
+data
 em_bayes <- data %>% 
-    add_ebb_estimate(strain_counts, tot_samples, method = "gamlss", mu_predictors = ~ case_counts)
-em_bayes
+    add_ebb_estimate(strain_detect, tot_samples, method = "gamlss", mu_predictors = ~ 0 + ns(days,df = 2) + new_cases)
+em_bayes 
 
-curve(dbeta(1.16, 3203))
-hist(rbeta(10000,shape1 = 1.16, shape2 = 3203))
-hist(rbeta(10000,1,1))
+em_bayes
